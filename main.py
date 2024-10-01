@@ -13,6 +13,7 @@ app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///data.db"  # Corrected URI
 db = SQLAlchemy(app=app)
 
+
 class Page(db.Model):
     id = db.Column(db.Integer, primary_key=True)
 
