@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search result - {{query}}</title>
+</head>
+<body>
+    {% if page == "404" %}
+        <p>No results found</p>
+
+        <form method="POST">
+            <button type="submit">Create a page?</button>
+        </form>
+    {% endif %}
+</body>
+</html>
