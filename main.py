@@ -92,7 +92,7 @@ def searchPage(query):
             return redirect(url_for("page", pagename=best_match))
 
         # Render "page not found" or list the best match if it’s above a lower threshold (50-70 range)
-        return render_template("searchResult.html", query=query, page=best_match)
+        return redirect(url_for("page", pagename=best_match))
 
     elif request.method == "POST":
         query = query.lower()
